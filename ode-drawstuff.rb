@@ -1,9 +1,9 @@
 require 'formula'
 
-class Ode < Formula
+class Ode-drawstuff < Formula
   url 'http://sourceforge.net/projects/opende/files/ODE/0.13/ode-0.13.tar.bz2'
   homepage 'http://www.ode.org/'
-  sha1 '93930249a503ce8d09aee1f50be54c7c7f18d7e113f4be3d78ae947b3bbfef17'
+#  sha1 '93930249a503ce8d09aee1f50be54c7c7f18d7e113f4be3d78ae947b3bbfef17'
 
   depends_on 'pkg-config' => :build
   depends_on 'gnu-sed' => :build
@@ -24,6 +24,7 @@ class Ode < Formula
 
   def install
     args = []
+    args << "--disable-demos"
     args << "--enable-double-precision" if ARGV.include? "--enable-double-precision"
     args << "--enable-libccd" if ARGV.include? "--enable-libccd"
 
