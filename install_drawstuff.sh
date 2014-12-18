@@ -60,13 +60,18 @@ echo "installing library files"
 install -m 755 drawstuff/src/libdrawstuff.la ${LIB_DIR}
 install -m 644 drawstuff/src/.libs/libdrawstuff.a ${LIB_DIR}
  
-echo "installing share files"
+echo "installing pkgconfig file"
 install -m 644 drawstuff.pc ${LIB_DIR}/pkgconfig
-install -d ${SHARE_DIR}/ode
+#install -d ${SHARE_DIR}/ode
 #install -m 644 ODEConfig*.cmake ${SHARE_DIR}/ode
+echo "installing texture image files"
 TEXTURES_PATH=${SHARE_DIR}/drawstuff/textures
 install -d ${TEXTURES_PATH}
 install -m 644 drawstuff/textures/* ${TEXTURES_PATH}
+echo "installing demos"
+install -d ${PREFIX}/demo
+/bin/cp ode/demo/* ${PREFIX}/demo
+
  
 echo "adding define of textures path into drawstuff.h"
 case ${OS} in
