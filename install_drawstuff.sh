@@ -35,7 +35,7 @@ ODE_VERSION=`grep ^Version: ode.pc | sed -e s/'Version: '//g`
 echo "generating drawstuff.pc"
 egrep '^prefix=|^exec_prefix=|^libdir=|^includedir=' ode.pc > drawstuff.pc
 rm drawstuff.pc.in*
-${DOWNLOAD_COMMAND} "https://raw.githubusercontent.com/sanoakr/homebrew-slab/master/"
+${DOWNLOAD_COMMAND} "https://raw.githubusercontent.com/sanoakr/homebrew-slab/master/drawstuff.pc.in"
 egrep -v 'prefix=|^exec_prefix=|^libdir=|^includedir=|^#' drawstuff.pc.in >> drawstuff.pc
  
 # replace step
@@ -54,7 +54,7 @@ sed -i -e s/@GL_LIBRARIES@/"${GL_LIBRARIES}"/g drawstuff.pc
 # install files
 echo "installing header files"
 install -d ${INCLUDE_DIR}/drawstuff
-install -m 644 include/drawstuff/* ${INCLUDE_DIR}/drawstuff
+install -m 644 include/drawstuff/*.h ${INCLUDE_DIR}/drawstuff
  
 echo "installing library files"
 install -m 755 drawstuff/src/libdrawstuff.la ${LIB_DIR}
