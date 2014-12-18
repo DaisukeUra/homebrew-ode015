@@ -38,7 +38,7 @@ class OdeDrawstuff < Formula
     system "make"
     system "make install"
     unless(ARGV.include?("--without-drawstuff"))
-      system "curl -O https://raw.githubusercontent.com/sanoakr/homebrew-slab/master/install_drawstaff.sh"
+      system "curl -O https://raw.githubusercontent.com/sanoakr/homebrew-slab/master/install_drawstuff.sh"
       system "chmod a+x install_drawstuff.sh"
       system "./install_drawstuff.sh"
     end
