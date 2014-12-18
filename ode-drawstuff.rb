@@ -36,6 +36,7 @@ class OdeDrawstuff < Formula
     end
     system "./configure", "--prefix=#{prefix}", *args
     system "make"
+    system "(cd drawstuff; make)"
     system "make install"
     unless(ARGV.include?("--without-drawstuff"))
       system "curl -O https://raw.githubusercontent.com/sanoakr/homebrew-slab/master/install_drawstuff.sh"
