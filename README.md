@@ -1,1 +1,1 @@
-This is a homebrew formulas for slab
+This is homebrew formulas for slab
