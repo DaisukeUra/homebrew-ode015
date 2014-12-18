@@ -16,10 +16,10 @@ class OdeDrawstuff < Formula
 
   def options
     [
-      ["--disable-double-precision", "Configure ODE to work without double precision"],
+      ["--disable-double-precision", "Configure ODE to work WITHOUT double precision"],
       ["--disable-libccd", "Disable all libccd colliders (except box-cylinder)"],
-      ["--enable-demos", "Build and install Drawstuff"],
-      ["--with-drawstuff", "Build and install Drawstuff"]
+      ["--enable-demos", "Build and install ODE demos"],
+      ["--without-drawstuff", "Build and install WITHOUT Drawstuff"]
     ]
   end
 
@@ -37,7 +37,7 @@ class OdeDrawstuff < Formula
     system "./configure", "--prefix=#{prefix}", *args
     system "make"
     system "make install"
-    if(ARGV.include?("--with-drawstuff"))
+    unless(ARGV.include?("--without-drawstuff"))
       system "curl -O https://raw.githubusercontent.com/sanoakr/homebrew-slab/master/install_drawstaff.sh"
       system "chmod a+x install_drawstuff.sh"
       system "./install_drawstuff.sh"
