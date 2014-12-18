@@ -1,1 +1,1 @@
-This is a homebrew formula for ODE with Drawstuff.
+This is a homebrew formulas for slab
