@@ -34,7 +34,7 @@ ODE_VERSION=`grep ^Version: ode.pc | sed -e s/'Version: '//g`
  
 echo "generating drawstuff.pc"
 egrep '^prefix=|^exec_prefix=|^libdir=|^includedir=' ode.pc > drawstuff.pc
-rm drawstuff.pc.in*
+rm drawstuff.pc.in* 2&>1 > /dev/null
 ${DOWNLOAD_COMMAND} "https://raw.githubusercontent.com/sanoakr/homebrew-slab/master/drawstuff.pc.in"
 egrep -v 'prefix=|^exec_prefix=|^libdir=|^includedir=|^#' drawstuff.pc.in >> drawstuff.pc
  
