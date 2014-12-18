@@ -73,7 +73,7 @@ case ${OS} in
 "MAC" ) SED_COMMAND=gsed;;
 "LINUX" ) SED_COMMAND=sed;;
 esac
-${SED_COMMAND} -i -e '/version.h>$/a #define DS_TEXTURES_PATH "@TEXTURES_PATH@"' ${INCLUDE_DIR}/drawstuff/drawstuff.h
+${SED_COMMAND} -i -e '/version.h>$/a #define DS_TEXTURES_PATH "@TEXTURES_PATH@"\n#define DRAWSTUFF_TEXTURE_PATH DS_TEXTURES_PATH' ${INCLUDE_DIR}/drawstuff/drawstuff.h
 eval ${SED_COMMAND} -i -e 's\,@TEXTURES_PATH@\,"${TEXTURES_PATH}"\,' ${INCLUDE_DIR}/drawstuff/drawstuff.h
  
 echo "Drawstuff has been installed"
