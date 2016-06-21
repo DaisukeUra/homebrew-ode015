@@ -3,7 +3,8 @@ require 'formula'
 class OdeDrawstuff < Formula
   url 'http://sourceforge.net/projects/opende/files/ODE/0.13/ode-0.13.tar.bz2'
   homepage 'http://www.ode.org/'
-  sha1 '0279d58cc390ff5cc048f2baf96cff23887f3838'
+  #sha1 '0279d58cc390ff5cc048f2baf96cff23887f3838'
+  sha256 '34ce3e236e313bf109a0cb5546d2fca462aed99f29a42e62bc1463b803c31ef9'
 
   depends_on 'pkg-config' => :build
   depends_on 'gnu-sed' => :build
