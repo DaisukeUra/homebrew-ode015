@@ -1,6 +1,6 @@
 require 'formula'
 
-class OdeDrawstuff < Formula
+class Ode015 < Formula
   url 'https://bitbucket.org/odedevs/ode/downloads/ode-0.15.2.tar.gz'
   homepage 'http://www.ode.org/'
   #sha1 '0279d58cc390ff5cc048f2baf96cff23887f3838'
