@@ -1,10 +1,10 @@
 require 'formula'
 
 class OdeDrawstuff < Formula
-  url 'http://sourceforge.net/projects/opende/files/ODE/0.13/ode-0.13.tar.bz2'
+  url 'https://bitbucket.org/odedevs/ode/downloads/ode-0.15.2.tar.gz'
   homepage 'http://www.ode.org/'
   #sha1 '0279d58cc390ff5cc048f2baf96cff23887f3838'
-  sha256 '34ce3e236e313bf109a0cb5546d2fca462aed99f29a42e62bc1463b803c31ef9'
+  sha256 '02c43ac96ada3cd623061c79b71a6f66e31e003a3138343d2df0d0d6fef9b9a7'
 
   depends_on 'pkg-config' => :build
   depends_on 'gnu-sed' => :build
