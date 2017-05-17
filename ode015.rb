@@ -4,7 +4,7 @@ class Ode015 < Formula
   url 'https://bitbucket.org/odedevs/ode/downloads/ode-0.15.2.tar.gz'
   homepage 'http://www.ode.org/'
   #sha1 '0279d58cc390ff5cc048f2baf96cff23887f3838'
-  sha256 '02c43ac96ada3cd623061c79b71a6f66e31e003a3138343d2df0d0d6fef9b9a7'
+  sha256 '889a6e249c2c7deea0c6e812e5334c8d340646502977a29cc942ea8af141f1de'
 
   depends_on 'pkg-config' => :build
   depends_on 'gnu-sed' => :build
