@@ -28,7 +28,7 @@ class Ode015 < Formula
     args = []
     args << "--disable-demos" unless ARGV.include? "--enable-demos"
     args << "--enable-double-precision" unless ARGV.include? "--disable-double-precision"
-    args << "--enable-libccd" unless ARGV.include? "--disable-libccd"
+    args << "--enable-libccd=internal" unless ARGV.include? "--disable-libccd"
 
     if ARGV.build_head?
       ENV['LIBTOOLIZE'] = 'glibtoolize'
